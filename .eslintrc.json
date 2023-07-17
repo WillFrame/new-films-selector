@@ -1,0 +1,90 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:@typescript-eslint/recommended"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"plugins": [
+		"react",
+		"@typescript-eslint"
+	],
+	"rules": {
+		// common
+		"comma-spacing": "error",
+		"no-multiple-empty-lines": ["error", { "max": 1 }],
+		"quotes": [2, "single", { "avoidEscape": true }],
+		"semi": ["error", "always"],
+		"no-console": ["error", {"allow": ["warn", "error"]}],
+		"object-curly-spacing": ["error", "never"],
+		"curly": ["error"],
+		"no-else-return": ["error"],
+		"brace-style": ["error"],
+		"eol-last": ["error"],
+		"keyword-spacing": ["error"],
+		"comma-dangle": ["error", "always-multiline"],
+		"space-infix-ops": ["error"],
+		"no-duplicate-imports": ["error"],
+		"array-bracket-spacing": ["error"],
+		"react/prop-types": ["off"],
+		"arrow-spacing": ["error", {
+			"before": true,
+			"after": true
+		}],
+		"max-len": ["error", {
+			"code": 120,
+			"tabWidth": 4,
+			"comments": 120,
+			"ignoreUrls": true
+		}],
+
+		// yield
+		"require-yield": "error",
+		"yield-star-spacing": ["error", "both"],
+
+		// react
+		"react/jsx-curly-brace-presence": [
+			"error",
+			{ "props": "never", "children": "never" }
+		],
+		"react/display-name": 0,
+		"jsx-quotes": ["error", "prefer-double"],
+		"jsx-a11y/alt-text": 0,
+
+		// typescript
+		"@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+		"@typescript-eslint/no-explicit-any": ["error"],
+		"@typescript-eslint/ban-types": 0,
+		"@typescript-eslint/semi": ["error"],
+		"@typescript-eslint/object-curly-spacing": ["error"],
+		"@typescript-eslint/member-delimiter-style": ["error"],
+		"@typescript-eslint/type-annotation-spacing": [
+			"error",
+			{
+				"before": false,
+				"after": true,
+				"overrides": {
+					"colon": {
+						"before": false,
+						"after": true
+					},
+					"arrow": {
+						"before": true,
+						"after": true
+					}
+				}
+			}
+		]
+	}
+}
