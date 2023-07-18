@@ -1,7 +1,7 @@
 import React, {useMemo, useState} from 'react';
 
 import {Component, DataType} from './types';
-import {TableWrapper, Wrapper} from './styles';
+import {TableWrapper, Wrapper, Title} from './styles';
 import {Table} from 'antd';
 import {columns} from './consts';
 import {getFilms, getGenres} from './utils';
@@ -25,6 +25,7 @@ const MainContent: Component = ({films}) => {
 
     return (
         <Wrapper>
+            <Title>Films selector</Title>
             <TableWrapper>
                 <Table
                     rowSelection={rowSelection}

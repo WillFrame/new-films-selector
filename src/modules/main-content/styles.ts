@@ -20,3 +20,10 @@ export const TableWrapper = styled.div`
     max-height: 1000px;
     overflow: auto;
 `;
+
+export const Title = styled.h1`
+    margin: 0;
+    font-size: 46px;
+    font-weight: 600;
+    font-family: sans-serif;
+`;

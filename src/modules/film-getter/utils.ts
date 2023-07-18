@@ -24,7 +24,10 @@ export const getSmartRandomFilm = (films: DataType[]) => {
 
             return value;
         });
-        
+
+    // eslint-disable-next-line no-console
+    console.log(films
+        .map(item => getFilmValue(item, date)));
     const randomInt = getRandomInt(filmsValues[filmsValues.length - 1]);
 
     for (let i = 0; i < filmsValues.length; i++) {
